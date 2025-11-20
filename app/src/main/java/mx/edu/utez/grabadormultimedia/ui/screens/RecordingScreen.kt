@@ -13,18 +13,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
-import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -34,15 +28,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.google.common.net.MediaType
+import mx.edu.utez.grabadormultimedia.ui.components.buttons.RecordingButton
 import java.io.File
 import java.sql.Date
 
@@ -171,28 +163,6 @@ fun RecordingScreen(
     }
 }
 // --- Helpers para la RecordingScreen ---
-@Composable
-private fun RecordingButton(
-    text: String,
-    icon: ImageVector,
-    onClick: () -> Unit,
-    isEnabled: Boolean = true,
-    buttonColor: Color = MaterialTheme.colorScheme.primary
-) {
-    Button(
-        onClick = onClick,
-        enabled = isEnabled,
-        colors = ButtonDefaults.buttonColors(containerColor = buttonColor),
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(60.dp),
-        shape = RoundedCornerShape(12.dp)
-    ) {
-        Icon(icon, contentDescription = text, modifier = Modifier.size(24.dp))
-        Spacer(Modifier.width(16.dp))
-        Text(text, fontSize = 16.sp)
-    }
-}
 private fun getRequiredPermissions(): Array<String> {
     return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
         arrayOf(
