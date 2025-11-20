@@ -5,12 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.Surface
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import mx.edu.utez.grabadormultimedia.ui.AppNavigation
 import mx.edu.utez.grabadormultimedia.ui.theme.GrabadorMultimediaTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,7 +17,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             GrabadorMultimediaTheme {
-
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    AppNavigation()
+                }
             }
         }
     }

@@ -16,7 +16,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModel
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModelFactory
+import mx.edu.utez.grabadormultimedia.ui.screens.AudioListScreen
+import mx.edu.utez.grabadormultimedia.ui.screens.ImageListScreen
 import mx.edu.utez.grabadormultimedia.ui.screens.RecordingScreen
+import mx.edu.utez.grabadormultimedia.ui.screens.VideoListScreen
+import mx.edu.utez.grabadormultimedia.ui.screens.VideoPlayerScreen
 import mx.edu.utez.grabadormultimedia.ui.theme.AppBottomNavBar
 
 @OptIn(ExperimentalMaterial3Api::class)
