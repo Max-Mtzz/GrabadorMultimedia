@@ -37,6 +37,10 @@ import com.google.common.net.MediaType
 import mx.edu.utez.grabadormultimedia.ui.components.buttons.RecordingButton
 import java.io.File
 import java.sql.Date
+import androidx.compose.material.icons.filled.Videocam
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.filled.Mic
 
 @Composable
 fun RecordingScreen(
