@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import coil.compose.AsyncImage
 import mx.edu.utez.grabadormultimedia.data.MediaItem
+import mx.edu.utez.grabadormultimedia.formatDate
 import okhttp3.internal.concurrent.formatDuration
 
 @Composable

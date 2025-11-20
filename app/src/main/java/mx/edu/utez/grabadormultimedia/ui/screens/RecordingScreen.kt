@@ -15,11 +15,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.Button
-import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Image
+import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -29,18 +32,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import com.google.common.net.MediaType
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
+import mx.edu.utez.grabadormultimedia.data.AudioRecorder
+import mx.edu.utez.grabadormultimedia.data.MediaType
 import mx.edu.utez.grabadormultimedia.ui.components.buttons.RecordingButton
 import java.io.File
-import java.sql.Date
-import androidx.compose.material.icons.filled.Videocam
-import androidx.compose.material.icons.filled.Image
-import androidx.compose.material.icons.filled.Stop
-import androidx.compose.material.icons.filled.Mic
+import java.util.Date
+import java.util.Locale
+
 
 @Composable
 fun RecordingScreen(

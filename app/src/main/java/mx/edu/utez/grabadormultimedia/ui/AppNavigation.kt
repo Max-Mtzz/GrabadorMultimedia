@@ -14,8 +14,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModelFactory
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModel
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModelFactory
+import mx.edu.utez.grabadormultimedia.data.AudioRecorder
 import mx.edu.utez.grabadormultimedia.ui.screens.AudioListScreen
 import mx.edu.utez.grabadormultimedia.ui.screens.ImageListScreen
 import mx.edu.utez.grabadormultimedia.ui.screens.RecordingScreen
@@ -36,6 +39,7 @@ fun AppNavigation() {
     val playbackViewModel: PlaybackViewModel = viewModel(
         factory = PlaybackViewModelFactory(application)
     )
+    val audioRecorder = AudioRecorder(LocalContext.current)
     Scaffold(
         bottomBar = {
             AppBottomNavBar(navController = navController)
@@ -47,7 +51,7 @@ fun AppNavigation() {
             modifier = Modifier.padding(padding)
         ) {
             composable(Screen.Recording.route) {
-                RecordingScreen(mediaViewModel = mediaViewModel)
+                RecordingScreen(mediaViewModel = mediaViewModel, audioRecorder =audioRecorder    )
             }
             composable(Screen.AudioList.route) {
                 AudioListScreen(
@@ -67,12 +71,17 @@ fun AppNavigation() {
             }
             composable(
                 route = Screen.VideoPlayer.route,
-                arguments = listOf(navArgument("uri") { type = NavType.StringType })
+                arguments = listOf(
+                    navArgument("uri") { type = NavType.StringType }
+                )
             ) { backStackEntry ->
-                val uri = backStackEntry.arguments?.getString("uri")
+
+                val uriString = backStackEntry.arguments?.getString("uri")
+                val uri = uriString?.let { Uri.parse(it) }
+
                 if (uri != null) {
                     VideoPlayerScreen(
-                        uri = Uri.decode(uri),
+                        uri = uri,
                         playbackViewModel = playbackViewModel
                     )
                 }

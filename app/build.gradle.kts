@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.ksp)
+    alias(libs.plugins.compose.compiler)   // 👈 OBLIGATORIO CON KOTLIN 2.0+
 }
 android {
     namespace = "com.ejemplo.mediaapp" // Asegúrate que sea tu namespace
@@ -65,6 +66,7 @@ dependencies {
 // Room (Base de datos)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.navigation.runtime.ktx)
     ksp(libs.androidx.room.compiler)
 // DataStore (Preferencias)
     implementation(libs.androidx.datastore.preferences)
@@ -84,4 +86,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.navigation:navigation-compose:2.7.0")
+    implementation("androidx.compose.material3:material3:1.4.0")
 }

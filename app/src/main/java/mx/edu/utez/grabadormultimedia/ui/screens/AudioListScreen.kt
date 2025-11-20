@@ -6,7 +6,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Sensors
+import androidx.compose.material.icons.filled.SensorsOff
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -21,10 +24,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModel
 import mx.edu.utez.grabadormultimedia.ui.components.AudioCard
-import androidx.compose.material.icons.filled.Sensors
-import androidx.compose.material.icons.filled.SensorsOff
 
 
 // --- 16. Screen 2: Lista de Audio ---
