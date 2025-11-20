@@ -121,8 +121,4 @@ class PlaybackViewModel(
             settingsRepository.saveVolume(clampedVolume)
         }
     }
-    override fun onCleared() {
-        super.onCleared()
-        releasePlayer() // Liberar recursos
-    }
 }
