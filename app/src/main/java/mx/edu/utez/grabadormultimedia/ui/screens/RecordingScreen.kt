@@ -41,6 +41,8 @@ import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.Mic
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
+import mx.edu.utez.grabadormultimedia.data.AudioRecorder
 
 @Composable
 fun RecordingScreen(

@@ -16,6 +16,7 @@ lifecycleRuntimeKtx = "2.8.3"
 lifecycleViewmodel = "2.8.3"
 room = "2.6.1"
 accompanistPager = "0.34.0"
+navigationCompose = "2.9.6"
 
 [libraries]
 
@@ -46,6 +47,7 @@ junit = { module = "junit:junit", version.ref = "junit" }
 # Accompanist para el carrusel (HorizontalPager)
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
 accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanistPager" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 

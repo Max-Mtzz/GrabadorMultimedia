@@ -1,19 +1,21 @@
 package mx.edu.utez.grabadormultimedia.ui
 
 import android.app.Application
-import android.net.Uri
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.input.KeyboardType.Companion.Uri
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
+import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModelFactory
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModel
 import mx.edu.utez.grabadormultimedia.ViewModel.PlaybackViewModelFactory
 import mx.edu.utez.grabadormultimedia.ui.screens.AudioListScreen
