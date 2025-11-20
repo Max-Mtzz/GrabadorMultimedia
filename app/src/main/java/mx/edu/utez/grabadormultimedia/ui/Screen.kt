@@ -1,6 +1,5 @@
 package mx.edu.utez.grabadormultimedia.ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.material.icons.Icons
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -14,7 +13,6 @@ sealed class Screen(val route: String, val label: String, val icon: ImageVector)
         fun createRoute(uri: String) = "video_player/$uri"
     }
 }
-
 val navBarItems = listOf(
     Screen.Recording,
     Screen.AudioList,
