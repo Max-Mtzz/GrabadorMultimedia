@@ -16,9 +16,6 @@ lifecycleRuntimeKtx = "2.8.3"
 lifecycleViewmodel = "2.8.3"
 room = "2.6.1"
 accompanistPager = "0.34.0"
-roomCommonJvm = "2.8.3"
-constraintlayout = "2.2.1"
-roomKtx = "2.8.3"
 
 [libraries]
 
@@ -49,9 +46,6 @@ junit = { module = "junit:junit", version.ref = "junit" }
 # Accompanist para el carrusel (HorizontalPager)
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
 accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "accompanistPager" }
-androidx-room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
 
 [plugins]
 
