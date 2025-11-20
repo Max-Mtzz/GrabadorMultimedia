@@ -1,4 +1,4 @@
-package mx.edu.utez.grabadormultimedia.ui.theme
+package mx.edu.utez.grabadormultimedia.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.material.icons.Icons
