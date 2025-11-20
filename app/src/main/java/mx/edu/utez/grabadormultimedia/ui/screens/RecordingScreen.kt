@@ -42,12 +42,10 @@ import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.Mic
 import mx.edu.utez.grabadormultimedia.ViewModel.MediaViewModel
-import mx.edu.utez.grabadormultimedia.data.AudioRecorder
 
 @Composable
 fun RecordingScreen(
-    mediaViewModel: MediaViewModel,
-    audioRecorder: AudioRecorder // Recibimos el helper
+    mediaViewModel: MediaViewModel
 ) {
     val context = LocalContext.current
     var hasPermissions by remember { mutableStateOf(false) }
